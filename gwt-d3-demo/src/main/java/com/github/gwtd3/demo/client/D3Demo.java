@@ -37,13 +37,19 @@ import com.github.gwtd3.demo.client.democases.FocusAndContext;
 import com.github.gwtd3.demo.client.democases.GeneralUpdatePattern1;
 import com.github.gwtd3.demo.client.democases.GeneralUpdatePattern2;
 import com.github.gwtd3.demo.client.democases.GeneralUpdatePattern3;
+import com.github.gwtd3.demo.client.democases.LorenzSystem;
 import com.github.gwtd3.demo.client.democases.StupidExample;
 import com.github.gwtd3.demo.client.democases.StupidExample2;
+<<<<<<< HEAD
 import com.github.gwtd3.demo.client.democases.arcs.ArcDemo;
 import com.github.gwtd3.demo.client.democases.behaviors.DragMultiples;
 import com.github.gwtd3.demo.client.democases.behaviors.ZoomDemo;
 import com.github.gwtd3.demo.client.democases.charts.AxisDemo;
 import com.github.gwtd3.demo.client.democases.charts.LineChartDemo;
+=======
+import com.github.gwtd3.demo.client.democases.TreeDemo;
+import com.github.gwtd3.demo.client.democases.behaviors.DragMultiples;
+>>>>>>> 0af5b79a12cf5ab837c15fc57f32203557030147
 import com.github.gwtd3.demo.client.test.ui.TestRunner;
 import com.github.gwtd3.demo.client.test.ui.TestSessionContainer;
 import com.github.gwtd3.demo.client.testcases.D3TestSuite;
@@ -96,7 +102,7 @@ public class D3Demo implements EntryPoint {
         FlowPanel p = new FlowPanel();
         ComplexPanel buttonContainer = new VerticalPanel();
         buttonContainer.add(new TestButton());
-        buttonContainer.add(new DemoButton("Arc", ArcDemo.factory()));
+        // buttonContainer.add(new DemoButton("Arc", ArcDemo.factory()));
         buttonContainer.add(new DemoButton("Stupid example", StupidExample.factory()));
         buttonContainer.add(new DemoButton("Stupid example 2", StupidExample2.factory()));
         buttonContainer.add(new DemoButton("General Update Pattern I", GeneralUpdatePattern1.factory()));
@@ -107,14 +113,19 @@ public class D3Demo implements EntryPoint {
         buttonContainer.add(new DemoButton("Focus and context", FocusAndContext.factory()));
         buttonContainer.add(new DemoButton("Bar chart", BarChart.factory()));
         buttonContainer.add(new DemoButton("Chord diagram", ChordDiagram.factory()));
-
+        buttonContainer.add(new DemoButton("Lorenz System", LorenzSystem.factory()));
         buttonContainer.add(new DemoButton("Drag Multiples", DragMultiples.factory()));
+<<<<<<< HEAD
         buttonContainer.add(new DemoButton("Axis Demo", AxisDemo.factory()));
 
         buttonContainer.add(new DemoButton("Line Chart", LineChartDemo.factory()));
         
         buttonContainer.add(new DemoButton("Zoom", ZoomDemo.factory()));
         
+=======
+        buttonContainer.add(new DemoButton("Collapsible Tree", TreeDemo.factory()));
+
+>>>>>>> 0af5b79a12cf5ab837c15fc57f32203557030147
         p.add(buttonContainer);
         container.addWest(p, 200);
 
@@ -148,9 +159,7 @@ public class D3Demo implements EntryPoint {
         /*
          * (non-Javadoc)
          * 
-         * @see
-         * com.google.gwt.event.dom.client.ClickHandler#onClick(com.google.gwt
-         * .event.dom.client.ClickEvent)
+         * @see com.google.gwt.event.dom.client.ClickHandler#onClick(com.google.gwt .event.dom.client.ClickEvent)
          */
         @Override
         public void onClick(final ClickEvent event) {
